@@ -1,0 +1,20 @@
+
+    <app-search-criteria></app-search-criteria>
+    
+    <h1>All Events</h1>
+
+    
+    <div *ngFor="let e of events">
+        <ul>
+            <li>Event Name: {{e.name}}</li>
+            <li>Date: {{e.dates?.initialStartDate?.localDate}}</li>
+            <li>State Code: {{e._embedded.venues[0].state.stateCode}}</li>
+            <li>Postal Code: {{e._embedded.venues[0].postalCode}}</li>
+            <li>Price Minimum: ${{e.priceRanges[0].min}}</li>
+            <li>Price Maximum: ${{e.priceRanges[0].max}}</li>
+            <div class = "add">
+                <button>+</button>
+                <p>Click + to add the event to your buckelist</p> 
+             </div>
+        </ul>
+    </div>

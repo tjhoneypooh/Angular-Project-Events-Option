@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.search1, .search2, .search3{
+    margin: 20px;
+}
+
+
+  .navigation li {
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  
+ 
+
+
