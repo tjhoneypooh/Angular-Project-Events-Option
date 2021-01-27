@@ -1,5 +1,9 @@
 
-
+/* .searchBoxes{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+} */
 .search1, .search2, .search3{
     margin: 10px;
 }

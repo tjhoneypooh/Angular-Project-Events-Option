@@ -5,17 +5,23 @@
 
     <div *ngFor="let e of events">
         <ul>
+
             <a href="{{e.url}}"><img width = "250" height ="150" src={{e?.images[0]?.url}}></a>
             <li>Event Name: {{e?.name}}</li>
             <li>Date: {{e.dates?.start?.localDate}}</li>
             <li>City: {{e?._embedded?.venues[0]?.city.name}}</li>
             <li>State: {{e?._embedded?.venues[0]?.state.stateCode}}</li>
             <li>Postal Code: {{e?._embedded?.venues[0]?.postalCode}}</li>
+
+            </ul>
+      
             <div class = "add">
-                <button>+</button>
-                <p>Click + to add the event to your buckelist</p> 
-            </div>
-        </ul>
+                <button>Add to Bucket List</button>
+                <!-- <p>Click + to add the event to your buckelist</p>  -->
+  
+        </div>
+        
+      
         
         <button (click) = toggleDisplay()>Show Additionl Event Information</button>
     <div *ngIf="!isShow">
