@@ -1,9 +1,18 @@
 
 
 .search1, .search2, .search3{
-    margin: 20px;
+    margin: 10px;
 }
-
 button {
     margin:5px;
+    width:10%;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+h1{
+    margin:10px;
 }
