@@ -1,3 +1,4 @@
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../event.service';
 
@@ -8,10 +9,22 @@ import { EventService } from '../event.service';
 })
 export class SearchCriteriaComponent implements OnInit {
 
+  dateInput: any;
+  eventCity: any;
+  eventKeyword: any;
+  returnData: any;
+  eventPostalCode: any;
+
   constructor(private eventService: EventService) { }
 
-  ngOnInit(): void {
-    
+  findEvent(){
+    this.eventService.getSearch3(this.eventKeyword, this.eventCity, this.eventPostalCode).subscribe(response =>{
+      this.returnData = response
+      console.log(this.returnData)
+    })
   }
 
+  ngOnInit() {
+    
+  }
 }

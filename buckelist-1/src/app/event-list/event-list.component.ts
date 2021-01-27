@@ -26,8 +26,8 @@ export class EventListComponent implements OnInit {
       // this.event.name = data._embedded.events[0].name
       // console.log(this.event)
 
-      // this.eventService.events = data._embedded.events
-      // console.log(this.eventService.events)
+      this.eventService.events = data._embedded.events
+      console.log(this.eventService.events)
 
     //   this.e.name = data._embedded.events[0].name
     //   this.e.date = data._embedded.events[0].dates.initialStartDate.localDate
