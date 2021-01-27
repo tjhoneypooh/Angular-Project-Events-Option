@@ -6,18 +6,22 @@
     <div #keyword *ngFor="let e of events">
         <ul>
             <a href=""><img width = "250" height ="150" src={{e?.images[0]?.url}}></a>
-            <li>Event Name: {{e?.name}}</li>
-            <li>Date: {{e.dates?.start?.localDate}}</li>
-            <li>Event url: {{e?.url}}</li>
-            <li>City: {{e?._embedded?.venues[0]?.city.name}}</li>
-            <li>State: {{e?._embedded?.venues[0]?.state.stateCode}}</li>
-            <li>Postal Code: {{e?._embedded?.venues[0]?.postalCode}}</li>
-            <!-- <li>Price Minimum: ${{e?.priceRanges[0]?.min}}</li> -->
-            <!-- <li>Price Maximum: ${{e?.priceRanges[0]?.max}}</li> -->
+            
+            <div class="infoContainer">
+                <li>Event Name: {{e?.name}}</li>
+                <li>Date: {{e.dates?.start?.localDate}}</li>
+                <li>Event url: {{e?.url}}</li>
+                <li>City: {{e?._embedded?.venues[0]?.city.name}}</li>
+                <li>State: {{e?._embedded?.venues[0]?.state.stateCode}}</li>
+                <li>Postal Code: {{e?._embedded?.venues[0]?.postalCode}}</li>
+                <!-- <li>Price Minimum: ${{e?.priceRanges[0]?.min}}</li> -->
+                <!-- <li>Price Maximum: ${{e?.priceRanges[0]?.max}}</li> -->
+       
             <div class = "add">
-                <button>+</button>
-                <p>Click + to add the event to your buckelist</p> 
+                <button>Add to Bucket List</button>
+                <!-- <p>Click + to add the event to your buckelist</p>  -->
             </div>
+        </div>
         </ul>
 </div>
              
