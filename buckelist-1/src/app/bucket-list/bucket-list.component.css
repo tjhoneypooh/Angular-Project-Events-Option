@@ -1,0 +1,26 @@
+.btn{
+    background-color:none;
+    border-color:hsla(300, 80%, 20%, 0.7);
+    border-style: solid;
+    border-radius: 20%;
+    background:none;
+}
+
+.fa-close{
+    color:hsla(300, 80%, 20%, 0.7);
+}
+
+button{
+    background-color:none;
+    border-color:none;
+}
+
+.deleteInstructions{
+    padding:5px;
+    margin: 10px;
+    color:hsla(300, 80%, 20%, 0.7);
+}
+
+h1{
+    color:blue;
+}

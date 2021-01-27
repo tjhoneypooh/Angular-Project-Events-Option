@@ -1,3 +1,14 @@
+.header{
+  background-image: linear-gradient(to bottom left,hsla(300, 86%, 49%, 0.65), 58%, blue),  
+  url('/buckelist-1/images/neonbrand-_QftviCWoBQ-unsplash.jpg');
+  background-position: center center;
+  background-size: cover;
+	background-repeat: no-repeat;
+
+ /* centerpoint is set to 90% from the top
+ /* lightness value is 20%, the saturation is 80%, and the transparency is 0.7*/
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -12,9 +23,37 @@
     display: flex;
     justify-content: center;
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     padding: 20px;
+    color:white;
   }
+
+  a{
+    color:white;
+    text-decoration:none;
+    display:flex;
+    justify-content:space-around;
+  }
+
+ .btn{
+    background: none;
+    border-color:none;
+    background-color:none;
+}
+
+h1{
+  color:white;
+}
+
+.logo{
+  height: 100px;
+  width: auto;
+  margin: 0 auto;
+
+}
+
+
+
 
   
  

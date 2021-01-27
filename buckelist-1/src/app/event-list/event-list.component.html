@@ -7,7 +7,7 @@
     <div *ngFor="let e of events">
         <ul>
             <li>Event Name: {{e.name}}</li>
-            <li>Date: {{e.dates?.initialStartDate?.localDate}}</li>
+            <li>Date: {{e.dates?.initialStartDate?.localDate}}</li>  <!--? marks says if there is not date or start date - it is okay - don't cancel out of for loop -->
             <li>State Code: {{e._embedded.venues[0].state.stateCode}}</li>
             <li>Postal Code: {{e._embedded.venues[0].postalCode}}</li>
             <li>Price Minimum: ${{e.priceRanges[0].min}}</li>

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EventService {
 
-  events: any[] = [];
+  events: any[] = []; //events array starts empty in the service - then it pulls info from the API link
 
   apiUrl:string = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=pLKSqSORlWUyzVke5EbWDYG0AADJmZat&stateCode=MI&postalCode="
 
