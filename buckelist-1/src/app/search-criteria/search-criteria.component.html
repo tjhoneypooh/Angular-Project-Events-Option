@@ -2,15 +2,15 @@
 
 <div class= "search-boxes">
     <div class="search1">
-        <input type="text" placeholder="Search by event name">
-        <button>Submit</button>
+        <input type="text" placeholder="Search by keyword" [(ngModel)] = "eventKeyword">
     </div>
     <div class="search2">
-        <input type="text" placeholder="Search by date">
-        <button>Submit</button>
+        <input type="text" placeholder="Search by city" [(ngModel)] = "eventCity">
     </div>
     <div class="search3">
-        <input type="text" placeholder="Search by postal code">
-        <button>Submit</button>
+        <input type="text" placeholder="Search by postal code" [(ngModel)] = "eventPostalCode">
+
+        <button (click)="findEvent()">Submit</button>
+
     </div>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { getLocaleDateFormat } from '@angular/common';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { EventService } from './event.service';
 
 @Component({
@@ -15,14 +16,27 @@ export class AppComponent implements OnInit {
   //   name: 'string',
   //   priceMin: "string",
   //   priceMax: "string",
+  //   url: "string"
+  // venue: "string";
+  //   venuePhone: number;
+  //   youTube: "string";
   // }
 
 
   constructor(private eventService: EventService) {}
 
+
   //Callback function
 
   ngOnInit () {
+    // this.eventService.getSearch1("keyword").subscribe((data:any)=>{
+    //   console.log(data)
+    // })
+
+    
+
+    
+
     // this.eventService.getName(48201).subscribe((data:any) => {
       // console.log(data)
     //   this.Event.name = data._embedded.events[0].name
