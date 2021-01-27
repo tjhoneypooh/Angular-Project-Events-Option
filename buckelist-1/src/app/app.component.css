@@ -1,6 +1,6 @@
 .header{
   background-image: linear-gradient(to bottom left,hsla(300, 86%, 49%, 0.65), 58%, blue),  
-  url('/buckelist-1/images/neonbrand-_QftviCWoBQ-unsplash.jpg');
+  url('/assets/images/neonbrandQftviCWoBQunsplash.jpg');
   background-position: center center;
   background-size: cover;
 	background-repeat: no-repeat;
@@ -21,18 +21,36 @@
 
   .navigation li {
     display: flex;
-    justify-content: center;
-    display: inline-block;
-    font-size: 18px;
-    padding: 20px;
+    flex-direction: row;
+    justify-content:space-around;
+    font-size: 15px;
+    padding: 0px;
+    margin:0px;
+    width:105px;
     color:white;
+    font-family: 'Open Sans', sans-serif;
   }
 
   a{
-    color:white;
     text-decoration:none;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 15px;
+    padding: 0px;
+    margin:0px;
+    width:105px;
+  }
+
+  ul{
     display:flex;
-    justify-content:space-around;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:0px;
+    padding: 0px;
+    
+
   }
 
  .btn{
@@ -46,13 +64,18 @@ h1{
 }
 
 .logo{
-  height: 100px;
+  height: auto;
   width: auto;
-  margin: 0 auto;
+  margin: 0;
+  padding:0;
+  display:flex;
+  justify-content: flex-start;
 
 }
 
-
+.box{
+    background-color:#C8E8FC;
+  }
 
 
   

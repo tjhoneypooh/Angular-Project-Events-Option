@@ -3,7 +3,16 @@
     margin: 20px;
 }
 
+.page-section-container{
+    background-color:purple;
+    width:auto;
+    height:auto;
+}
+
 
 h1{
-    color:blue;
+    color:white;
+    background-color:purple;
 }
+    
+    
