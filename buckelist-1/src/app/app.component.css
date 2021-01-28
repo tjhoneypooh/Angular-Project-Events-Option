@@ -10,12 +10,48 @@
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .search1, .search2, .search3{
-    margin: 20px;
+  margin: 20px;
+}
+
+h1{
+font-size:50px;
+margin:5px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* display: inline-block; */
+  font-size: 20px;
+  padding: 5px;
+  align-content: center;
+  
+}
+a{
+display:flex;
+text-decoration: none;
+}
+.links{
+display:flex;
+flex-direction: row;
+}
+p{
+margin:10px;
+}
+.box{
+height:100vh;
+width: 100%;
+}
+
+h1{
+  font-size:50px;
+  margin:5px;
 }
 
 

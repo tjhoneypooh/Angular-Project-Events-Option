@@ -3,18 +3,44 @@
     
     <h1>All Events</h1>
 
-    
     <div *ngFor="let e of events">
         <ul>
-            <li>Event Name: {{e.name}}</li>
-            <li>Date: {{e.dates?.initialStartDate?.localDate}}</li>  <!--? marks says if there is not date or start date - it is okay - don't cancel out of for loop -->
-            <li>State Code: {{e._embedded.venues[0].state.stateCode}}</li>
-            <li>Postal Code: {{e._embedded.venues[0].postalCode}}</li>
-            <li>Price Minimum: ${{e.priceRanges[0].min}}</li>
-            <li>Price Maximum: ${{e.priceRanges[0].max}}</li>
+
+            <a href="{{e.url}}"><img width = "250" height ="150" src={{e?.images[0]?.url}}></a>
+            <li>Event Name: {{e?.name}}</li>
+            <li>Date: {{e.dates?.start?.localDate}}</li>
+            <li>City: {{e?._embedded?.venues[0]?.city.name}}</li>
+            <li>State: {{e?._embedded?.venues[0]?.state.stateCode}}</li>
+            <li>Postal Code: {{e?._embedded?.venues[0]?.postalCode}}</li>
+
+            </ul>
+      
             <div class = "add">
-                <button>+</button>
-                <p>Click + to add the event to your buckelist</p> 
-             </div>
+                <button>Add to Bucket List</button>
+                <!-- <p>Click + to add the event to your buckelist</p>  -->
+  
+        </div>
+        
+      
+        
+        <button (click) = toggleDisplay()>Show Additionl Event Information</button>
+    <div *ngIf="!isShow">
+        <ul>
+                <li>Venue Name: {{e?._embedded?.venues[0]?.name}}</li>
+                <li>Ticket Price Minimum: ${{e?.priceRanges[0]?.min}}</li>
+                <li>Ticket Price Maximum: ${{e?.priceRanges[0]?.max}}</li>
+                <li>Venue Contact Info.: {{e?._embedded?.venues[0]?.boxOfficeInfo?.phoneNumberDetail}}</li>
+                  
         </ul>
     </div>
+</div>
+             
+ 
+
+
+        
+
+
+
+
+    

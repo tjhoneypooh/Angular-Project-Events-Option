@@ -6,4 +6,13 @@ ul {
 
   h1{
     color:blue;
+    display:flex;
+    flex-direction: row;
+    width:100%;
   }
+
+ .infoContainer{
+   margin: 5px 0px 15px 10px;
+   
+ }
+
