@@ -7,10 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class EventService {
 
+  
+
   events: any[] = [];
 
   apiUrl:string = "https://app.ticketmaster.com/discovery/v2/events.json?&apikey=pLKSqSORlWUyzVke5EbWDYG0AADJmZat&"
 
+  
+  
 
   constructor(private http: HttpClient) { }
   getSearch3(searchK:any, cityParams:any,postalCode:any,):Observable<any>{
