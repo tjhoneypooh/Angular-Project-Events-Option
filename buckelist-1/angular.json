@@ -26,6 +26,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+        
+
             ],
             "styles": [
               "src/styles.css"
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "buckelist"
+  "defaultProject": "buckelist",
+  "cli": {
+    "analytics": "49bfa0c7-fdcd-4b75-a69b-16a8e21f7076"
+  }
 }

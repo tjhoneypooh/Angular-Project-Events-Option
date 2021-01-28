@@ -1,22 +1,18 @@
 
-/* .searchBoxes{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 .search1, .search2, .search3{
-    margin: 10px;
+    margin: 20px;
 }
-button {
-    margin:5px;
-    width:10%;
+
+.page-section-container{
+    background-color:purple;
+    width:auto;
+    height:auto;
 }
-.container{
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
+
+
 h1{
-    margin:10px;
+    color:white;
+    background-color:purple;
 }
+    
+    
