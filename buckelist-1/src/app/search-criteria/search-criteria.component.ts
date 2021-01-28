@@ -12,23 +12,17 @@ export class SearchCriteriaComponent implements OnInit {
   dateInput: any;
   eventCity: any;
   eventKeyword: any;
-  returnData: any;
   eventPostalCode: any;
 
   constructor(private eventService: EventService) { }
 //method to search API when user enters parameters
   findEvent(){
     this.eventService.getSearch3(this.eventKeyword, this.eventCity, this.eventPostalCode).subscribe(response =>{
-      this.returnData = response
-      console.log(this.returnData)
-      return this.returnData
-      
+      this.eventService.events = response._embedded.events
     })
   }
 
-  ngOnInit() {
-
-    
+  ngOnInit() {  
     
   }
 }

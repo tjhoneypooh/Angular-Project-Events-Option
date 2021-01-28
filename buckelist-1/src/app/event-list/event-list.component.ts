@@ -23,14 +23,7 @@ export class EventListComponent implements OnInit {
 
   constructor(private eventService: EventService) {}
 
-  //loads data when app starts
-
   ngOnInit() {
-    this.eventService.getName(48201).subscribe((data:any) => {
-
-      this.eventService.events = data._embedded.events
-      console.log(this.eventService.events)
-
-    })
+    
   }
 }
