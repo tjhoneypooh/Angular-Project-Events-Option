@@ -7,6 +7,9 @@ import { EventService } from '../event.service';
   styleUrls: ['./event-list.component.css'],
 })
 export class EventListComponent implements OnInit {
+  
+  constructor(private eventService: EventService) {}
+
   get events(): any[] {
     return this.eventService.events;
   }
@@ -16,8 +19,11 @@ export class EventListComponent implements OnInit {
   toggleDisplay(index: number) {
     this.isShow = index
   }
-
-  constructor(private eventService: EventService) {}
+  
+addToBucketList(events:object){
+  this.eventService.addToBucketList(events);
+}
+  
 
   ngOnInit() {}
 }
