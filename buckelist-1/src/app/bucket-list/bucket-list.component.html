@@ -1,6 +1,7 @@
-<h1>Bucket List</h1>
+<div class="listHeaderBackground">
+  <h1>Bucket List</h1>
+</div>
 
-<div class="deleteInstructions">
   <div class="bucketListContainer">
     <div *ngIf="bucketList.length === 0">
       There is nothing in Your Bucket List!
@@ -8,17 +9,18 @@
     <div *ngIf="bucketList.length > 0">
       <div *ngFor="let item of bucketList; let i = index">
         <a href="{{ item.url }}">
-           <img width="250" height="150" src="{{ item?.images[0]?.url }}"/>
+          <img width="250" height="150" src="{{ item?.images[0]?.url }}" />
         </a>
         <li>Event Name: {{ item?.name }}</li>
         <li>Date: {{ item.dates?.start?.localDate }}</li>
         <li>City: {{ item?._embedded?.venues[0]?.city.name }}</li>
         <li>State: {{ item?._embedded?.venues[0]?.state.stateCode }}</li>
         <li>Postal Code: {{ item?._embedded?.venues[0]?.postalCode }}</li>
+        <div class="deleteInstructions">
         <button (click)="removeFromBucketList(i)" class="btn">
           <i class="fa fa-close"></i>
         </button>
       </div>
+      </div>
     </div>
   </div>
-</div>

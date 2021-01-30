@@ -1,31 +1,37 @@
 <app-search-criteria></app-search-criteria>
-
+<div class="all-events-header">
 <h1>All Events</h1>
-
-<div *ngFor="let e of events; let i =index">
+</div>
+<div *ngFor="let e of events; let i =index" class ="event-detail-background">
     <ul>
 
-        <a href="{{e.url}}" target="blank"><img width="250" height="150" src={{e?.images[0]?.url}}></a>
-        <li>Event Name: {{e?.name}}</li>
-        <li>Date: {{e.dates?.start?.localDate}}</li>
-        <li>City: {{e?._embedded?.venues[0]?.city.name}}</li>
-        <li>State: {{e?._embedded?.venues[0]?.state.stateCode}}</li>
-        <li>Postal Code: {{e?._embedded?.venues[0]?.postalCode}}</li>
+        <a href="{{e.url}}" target="blank"><img width="340" height="150" src={{e?.images[0]?.url}}></a>
+        <li><strong>Event Name:</strong> {{e?.name}}</li>
+        <li><strong>Date:</strong> {{e.dates?.start?.localDate}}</li>
+        <li><strong>City:</strong> {{e?._embedded?.venues[0]?.city.name}}</li>
+        <li><strong>State:</strong> {{e?._embedded?.venues[0]?.state.stateCode}}</li>
+        <li><strong>Postal Code:</strong> {{e?._embedded?.venues[0]?.postalCode}}</li>
 
     </ul>
 
-    <div class="add">
+    <div class = "add">
+                <button (click)="addToBucketList(e)" class="eventButtons"><i class="fas fa-plus-circle"> <span> BucketList</span></i></button>
+                <!-- <p>Click + to add the event to your buckelist</p> -->
+                <button class="eventButtons" (click)="toggleDisplay(i)"> <i class="fas fa-chevron-circle-down"><span> More Info</span></i></button>
+        </div>
+
+    <!-- <div class="add">
         <button (click)="addToBucketList(e)">Add to Bucket List</button>
       </div>
 
-    <button (click)="toggleDisplay(i)">Show Additionl Event Information</button>
+    <button (click)="toggleDisplay(i)">Show Additionl Event Information</button> -->
 
 
     <div *ngIf="isShow === i">
-        <ul>
-            <li>Ticket Price Minimum: ${{e?.priceRanges[0]?.min}}</li>
-            <li>Ticket Price Maximum: ${{e?.priceRanges[0]?.max}}</li>
-            <li>Venue Contact Info.: {{e?._embedded?.venues[0]?.boxOfficeInfo?.phoneNumberDetail}}</li>
+        <ul class ="additionalInfo">
+            <li><strong>Ticket Price Minimum:</strong>${{e?.priceRanges[0]?.min}}</li>
+            <li><strong>Ticket Price Maximum:</strong> ${{e?.priceRanges[0]?.max}}</li>
+            <li><strong>Venue Contact Information:</strong> <br> {{e?._embedded?.venues[0]?.boxOfficeInfo?.phoneNumberDetail}}</li>
 
         </ul>
     </div>
