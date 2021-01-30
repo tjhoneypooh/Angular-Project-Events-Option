@@ -21,6 +21,27 @@ export class SearchCriteriaComponent implements OnInit {
       this.eventService.events = response._embedded.events
     })
   }
+  findEvent4(){
+    this.eventService.getSearch4(this.eventKeyword).subscribe(response =>{
+      this.eventService.events = response._embedded.events
+    })
+  }
+
+  findEvent2(){
+    this.eventService.getSearch1(this.eventPostalCode).subscribe(response =>{
+      this.eventService.events = response._embedded.events
+    })
+  }
+
+  findEvent1(){
+    this.eventService.getSearch2(this.eventCity).subscribe(response =>{
+      this.eventService.events = response._embedded.events
+    })
+  }
+
+  reloadPage() {
+    window.location.reload();
+ }
 
   ngOnInit() {  
     

@@ -4,14 +4,19 @@
 <div class= "search-boxes">
     <div class="search1">
         <input type="text" placeholder="Search by keyword" [(ngModel)] = "eventKeyword">
+        <button (click)="findEvent4()">Submit</button>
     </div>
     <div class="search2">
         <input type="text" placeholder="Search by city" [(ngModel)] = "eventCity">
+        <button (click)="findEvent1()">Submit</button>
     </div>
     <div class="search3">
         <input type="text" placeholder="Search by postal code" [(ngModel)] = "eventPostalCode">
+        <button (click)="findEvent2()">Submit</button>
     </div>
-    <button (click)="findEvent()">Submit</button>
+    <button (click)="findEvent()">Search All</button>
+    
+    <button (click) = "reloadPage()">Clear Search</button> 
 </div>
 </div>
 

@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EventService {
+  
   events: any[] = []; //events array starts empty in the service - then it pulls info from the API link
 
   
@@ -25,6 +26,26 @@ export class EventService {
       params: { keyword: searchK, city: cityParams, postalCode: postalCode },
     });
   }
+
+  getSearch1(postalCode: any): Observable<any> {
+    return this.http.get(this.apiUrl, {
+      params: {postalCode: postalCode},
+    });
+  }
+
+  getSearch4(searchK: any): Observable<any> {
+    return this.http.get(this.apiUrl, {
+      params: {keyword: searchK},
+    });
+  }
+
+  getSearch2(cityParams: any): Observable<any> {
+    return this.http.get(this.apiUrl, {
+      params: {city: cityParams},
+    });
+  }
+
+
 
   getName(postalCode: any): Observable<any> {
     return this.http.get(`${this.apiUrl}${postalCode}`);
