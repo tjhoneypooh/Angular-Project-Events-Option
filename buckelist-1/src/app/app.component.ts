@@ -10,12 +10,7 @@ import { EventService } from './event.service';
 export class AppComponent implements OnInit {
   title = 'buckelist';
   
-
-
   constructor(private eventService: EventService) {}
-
-
-
 
   ngOnInit () {
   }
