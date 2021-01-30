@@ -9,7 +9,7 @@ import { EventService } from '../event.service';
 })
 export class EventListComponent implements OnInit {
   
-
+  constructor(private eventService: EventService) {}
 
   get events(): any[] {
     return this.eventService.events;
@@ -20,8 +20,11 @@ export class EventListComponent implements OnInit {
   toggleDisplay() {
     this.isShow = !this.isShow;
   }
-
-  constructor(private eventService: EventService) {}
+  
+addToBucketList(events:object){
+  this.eventService.addToBucketList(events);
+}
+  
 
   ngOnInit() {
     
