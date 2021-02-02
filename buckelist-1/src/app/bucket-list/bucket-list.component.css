@@ -1,22 +1,41 @@
 .btn{
-    background-color:none;
+    background-color:white;
     border-color:hsla(300, 80%, 20%, 0.7);
     border-style: solid;
     border-radius: 20%;
-    background:none;
+    background:white;
+    display:flex;
+    justify-content:flex-end;
 }
+
 .fa-close{
     color:hsla(300, 80%, 20%, 0.7);
+    background-color:white;
+    display:flex;
+    justify-content:flex-end;
+   
 }
+
 button{
-    background-color:none;
+    background-color:white;
     border-color:none;
+    display:flex;
+    justify-content: flex-end;
+    margin-left:10px;
+    
 }
+
 .deleteInstructions{
     padding:5px;
     margin: 10px;
     color:hsla(300, 80%, 20%, 0.7);
+    background-image:linear-gradient(to bottom,#338CFA,45%,#E4DDFC);
+    background-color:white;
+    color:purple;
+    font-style:bold;
+    font-family:'source-sans', sans-serif;
 }
+
 h1{
     color:white;
     font-size: 20pt;
@@ -26,6 +45,7 @@ h1{
     flex-direction: row;
     font-style: bold;
 }
+
 .listHeaderBackground{
     background-color:#338CFA;
     height:50px;
@@ -34,12 +54,156 @@ h1{
     align-items:center;
     box-shadow:0px 2px 5px 1px rgba(55, 2, 92, 0.207);
 }
+
+li{
+    text-decoration:none;
+    color:purple;
+    list-style-type: none; 
+    padding: 0;
+    margin: 0px;
+    line-height:25pt;
+}
+
+.empty-bucketlist{
+    font-size: 18pt;
+    font-family:'source-sans', sans-serif;
+    color:purple;
+    font-size:bold;
+    margin:40px 30px;
+    padding:15px;
+    line-height:25pt;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    background-color:white; 
+}
+
+.event-detail-background{
+    background-image:linear-gradient(to bottom,#338CFA,25%,#E4DDFC);
+    background-color:white;
+    color:purple;
+    font-style:bold;
+    font-family:'source-sans', sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+a{
+    padding:0px;
+    margin:0px;
+}
+
+.desktop-background{
+    margin:0px;
+    padding:0px;
+}
+
+
 @media only screen and (min-width:768px){
+    
     body{
       width:auto;
       height: 100vh;
     }
-}
+
+    .desktop-background{
+        background-image:linear-gradient(to top,#338CFA,45%,#E4DDFC);
+        color:purple;
+        font-style:bold;
+        font-family:'source-sans', sans-serif;
+        width:auto;
+      }
+    
+      a{
+        display:flex;
+        justify-content:flex-end;
+        flex-direction:row;
+        
+      }
+    
+      .desktop-photo{
+        display:flex;
+        justify-content:flex-end;
+        flex-direction:row;
+        height:250px;
+        width:355px;
+        margin-left:0px;
+        margin-right:0px;
+      }
+    
+    .event-detail-background{
+     background-color:white;
+      color:purple;
+      font-style:bold;
+      font-family:'source-sans', sans-serif;
+    }
+    
+    .all-events-header{
+      display:flex;
+      justify-content:flex-start;
+      align-items:center;
+      box-shadow:0px 2px 5px 1px rgba(55, 2, 92, 0.207);
+      padding: 10px 0px 10px 64px;
+    }
+    
+    h2{
+      color:white;
+      font-size: 20pt;
+      font-family:'source-sans', sans-serif;
+      padding: 0px 0px 0px 34px;
+      margin:0px 0px 0px 30px;
+      display:flex;
+      justify-content:flex-start;
+    }
+    
+    li{
+      display:flex;
+      flex-direction:row;
+      margin:0px;
+      padding:0px;
+      font-size: 16pt;
+    }
+    
+    .event-detail-background.li{
+      display:flex;
+      align-items:center;
+      justify-content: flex-start;
+    }
+    
+    ul{
+      display:flex;
+      justify-content: flex-start;
+    }
+
+    .event-info{
+        display:flex;
+        flex-direction:row;
+        padding:5px;
+        margin:5px;
+        font-size:18pt;
+        align-items:center;
+        justify-content: flex-start;
+        flex-wrap:wrap;
+      }
+    
+      .bucketlist-items{
+         display:flex;
+         flex-direction:row;
+      }
+
+      .btn{
+          width:auto;
+          height:23px;
+          margin-left:5px;
+          margin-top:5px;
+          padding:4px 5px 0px 5px;
+          text-align:center;
+          
+      }
+    
+    }
+
 
 
 

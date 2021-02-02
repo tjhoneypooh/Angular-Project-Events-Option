@@ -4,8 +4,12 @@
     <div class="header">
       <img class="logo" src='./assets/images/eventLogoWhite.png' alt="Event-app-logo" />
         <ul class = "navigation">
-            <li><a routerLink="/events" routerLinkActive='active'>Find Events</a></li>
-            <li><a routerLink="/bucket-list" routerLinkActive='active'>My BucketList</a></li>
+
+          <div class="links">
+              <li class="find-events-link"><a routerLink="/events" routerLinkActive='active'>Find Events</a></li>
+            </div>
+
+              <li><a routerLink="/bucket-list" routerLinkActive='active'>My BucketList</a></li>
           </ul>
     </div>
   <router-outlet></router-outlet>

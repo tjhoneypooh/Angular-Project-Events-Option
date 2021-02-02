@@ -3,24 +3,27 @@
 </div>
 
   <div class="bucketListContainer">
-    <div *ngIf="bucketList.length === 0">
-      There is nothing in Your Bucket List!
+    
+    <div *ngIf="bucketList.length === 0" class="empty-bucketlist">
+      <strong>There is nothing in Your Bucket List Yet!</strong>
     </div>
+    <div class="deleteInstructions" class ="event-detail-background">
+    <ul class="desktop-background">
     <div *ngIf="bucketList.length > 0">
-      <div *ngFor="let item of bucketList; let i = index">
-        <a href="{{ item.url }}">
-          <img width="250" height="150" src="{{ item?.images[0]?.url }}" />
-        </a>
-        <li>Event Name: {{ item?.name }}</li>
-        <li>Date: {{ item.dates?.start?.localDate }}</li>
-        <li>City: {{ item?._embedded?.venues[0]?.city.name }}</li>
-        <li>State: {{ item?._embedded?.venues[0]?.state.stateCode }}</li>
-        <li>Postal Code: {{ item?._embedded?.venues[0]?.postalCode }}</li>
-        <div class="deleteInstructions">
-        <button (click)="removeFromBucketList(i)" class="btn">
-          <i class="fa fa-close"></i>
-        </button>
+      <div *ngFor="let item of bucketList; let i = index" class="bucketlist-items">
+        <a href="{{ item.url }}"><img width="340" height="150" src="{{ item?.images[0]?.url }}" class="desktop-photo"/></a>
+       
+          <button (click)="removeFromBucketList(i)" class="btn">
+            <i class="fa fa-close"></i>
+          </button>
+        <li class="event-info"><strong> Event Name: </strong> {{ item?.name }}</li>
+        <li class="event-info"><strong> Date: </strong> {{ item.dates?.start?.localDate }} </li>
+        <li class="event-info"><strong> City: </strong> {{ item?._embedded?.venues[0]?.city.name }} </li>
+        <li class="event-info"><strong> State: </strong> {{ item?._embedded?.venues[0]?.state.stateCode }} </li>
+        <li class="event-info"><strong> Postal Code: </strong> {{ item?._embedded?.venues[0]?.postalCode }} </li>
       </div>
       </div>
-    </div>
+      
+    </ul>
+  </div>
   </div>
